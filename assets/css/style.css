@@ -1,0 +1,37 @@
+* {
+    text-align: center;
+}
+
+h1 {
+    color: white;
+}
+
+#hidden-form {
+    display: none;
+    background-color: red;
+}
+
+#main-div {
+    background-color: rgb(0, 68, 253);
+    margin: 0px 200px 75px 200px;
+}
+
+#quiz-h1 {
+    display: none;
+}
+
+#start {
+    border: black solid 5px;
+}
+
+#correct {
+    display: none;
+}
+
+#incorrect {
+    display: none;
+}
+
+#unanswered {
+    display: none;
+}
