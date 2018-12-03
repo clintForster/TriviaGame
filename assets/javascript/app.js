@@ -26,15 +26,12 @@ function countdown() {
 
 function quizLoad() {
     setTimeout(timerUp, 30000);
-    $("#starting-h1").hide();
-    $("#quiz-h1").show();
     $("#main-div").height("1000px");
     $("#start").hide();
     $("#hidden-form").show();
 }
 
 function timerUp() {
-    $("#quiz-h1").hide();
     $("#hidden-form").hide();
     $("#main-div").height("600px");
     results();
@@ -90,24 +87,24 @@ function results() {
     // 'input[name=Q0]:checked'
 
     for (var i = 0; i < myQuestions.length; i++) {
-        // var currentQuestion = ("'input[name=Q"+i+"]:checked'");
-        console.log($("'input[name=Q" + i + "]:checked'").val());
-        console.log($(myQuestions[i].correctAnswer))
-        // if ($(currentQuestion).val() === myQuestions[i].correctAnswer) {
-        //     correct++;
-        // } else if ($(currentQuestion).val() === undefined) {
-        //     unanswered++
-        // } else {
-        //     incorrect++;
-        // }
+        var currentQuestion = ("'input[name=Q"+i+"]:checked'");
+        // console.log($('input[name=Q0]:checked').val());
+        // console.log($(myQuestions[i].correctAnswer));
+        if ($(currentQuestion).val() === myQuestions[i].correctAnswer) {
+            correct++;
+        } else if ($(currentQuestion).val() === undefined) {
+            unanswered++
+        } else {
+            incorrect++;
+        }
     }
 
     $("#correct").text("Correct: " + correct);
-    $("#correct").show()
+    $("#correct").show();
     $("#incorrect").text("Incorrect: " + incorrect);
-    $("#incorrect").show()
+    $("#incorrect").show();
     $("#unanswered").text("Unanswered: " + unanswered);
-    $("#unanswered").show()
+    $("#unanswered").show();
 
 }
 
