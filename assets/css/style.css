@@ -12,9 +12,9 @@ h1 {
     color: white;
     font-size: 200px;
     text-shadow: 0px 3px 0px white,
-                 0px 14px 10px rgba(255,255,255,0.3),
-                 0px 24px 2px rgba(255,255,255,0.1),
-                 0px 34px 30px rgba(255,255,255,0.1);
+                 0px 14px 10px rgba(129, 62, 255, 0.3),
+                 0px 24px 2px #ff66c41a,
+                 0px 34px 30px rgba(228, 65, 127, 0.1);
                  background: -webkit-linear-gradient(#eee, #333);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -22,6 +22,14 @@ h1 {
 
 form {
     line-height: 65px;
+}
+
+span {
+    color:white;
+}
+
+input {
+    margin-right: 30px;
 }
 
 #hidden-form {
@@ -51,6 +59,17 @@ form {
     font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
 }
   
+#start:active {
+    margin-top: 50px;
+    background-color:black;
+    border: rgba(255,255,255,0.5) solid 5px;
+    width: 500px;
+    height: 300px;
+    color: rgba(255,255,255,0.5);
+    font-size: 100px;
+    font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
+}
+
 #correct {
     display: none;
 }
@@ -60,6 +79,14 @@ form {
 }
 
 #unanswered {
+    display: none;
+}
+
+#timer {
+    font-size: 30px;
+}
+
+#well-done {
     display: none;
 }
 

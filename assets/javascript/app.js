@@ -26,7 +26,7 @@ function countdown() {
 
 function quizLoad() {
     setTimeout(timerUp, 30000);
-    $("#main-div").height("1000px");
+    $("#main-div").height("1150px");
     $("#start").hide();
     $("#hidden-form").show();
 }
@@ -62,6 +62,16 @@ function results() {
             correctAnswer: 'mount-everest'
         },
         {
+            question: "Hg is the chemical symbol of which element?",
+            answers: {
+                A1: 'mercury',
+                A2: 'iron',
+                A3: 'lead',
+                A4: 'hologramium'
+            },
+            correctAnswer: 'mercury'
+        },
+        {
             question: "The beaver is the national emblem of which country?",
             answers: {
                 A1: 'kentucky',
@@ -80,20 +90,21 @@ function results() {
                 A4: 'surprise'
             },
             correctAnswer: 'wifes-head'
-        },
+        }
     ];
 
     // console.log('input[name=Q'+i+']:checked');
     // 'input[name=Q0]:checked'
 
     for (var i = 0; i < myQuestions.length; i++) {
-        var currentQuestion = ("'input[name=Q"+i+"]:checked'");
-        // console.log($('input[name=Q0]:checked').val());
+        var currentQuestion = ("input[name=Q"+i+"]:checked");
+        console.log($('input[name=Q0]:checked').val());
         // console.log($(myQuestions[i].correctAnswer));
         if ($(currentQuestion).val() === myQuestions[i].correctAnswer) {
+            console.log(currentQuestion);
             correct++;
         } else if ($(currentQuestion).val() === undefined) {
-            unanswered++
+            unanswered++;
         } else {
             incorrect++;
         }
@@ -105,6 +116,7 @@ function results() {
     $("#incorrect").show();
     $("#unanswered").text("Unanswered: " + unanswered);
     $("#unanswered").show();
+    $("#well-done").show();
 
 }
 
