@@ -13,7 +13,7 @@ $("#start").on("click", function () {
     start = true;
     quizLoad();
     setInterval(countdown, 1000);
-    $("#timer").text("Time Remaining: " + time);
+    $("#timer").text("Time Remaining: " + time + " seconds");
 });
 
 // game form loads and produces list of multiple choice or true and false options and questions
@@ -21,7 +21,7 @@ $("#start").on("click", function () {
 function countdown() {
     clockIsRunning = true;
     time--;
-    $("#timer").text("Time Remaining: " + time);
+    $("#timer").text("Time Remaining: " + time + " seconds");
 }
 
 function quizLoad() {

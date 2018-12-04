@@ -17,12 +17,20 @@ h1 {
                  0px 24px 2px #ff66c41a,
                  0px 34px 30px rgba(228, 65, 127, 0.1);
                  background: -webkit-linear-gradient(#eee, #333);
-  -webkit-background-clip: text;
+                 -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+img {
+    border: white solid 5px;
 }
 
 form {
     line-height: 65px;
+}
+
+p {
+    text-decoration: white underline;
 }
 
 span {
@@ -43,20 +51,24 @@ input {
 #main-div {
     height: 600px;
     background-color: black;
-    margin: 75px 200px 75px 200px;
+    margin: 75px 225px 75px 225px;
+    width: 1075px;
 }
-
 
 #start {
     margin-top: 50px;
     background-color:black;
-    border: white solid 5px;
     width: 500px;
     height: 300px;
     color: white;
     font-size: 100px;
     font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
     animation-name: out;
+    border: white solid 5px;
+}
+
+#starting-h1 {
+    position:
 }
   
 #start:active {
@@ -84,6 +96,7 @@ input {
 
 #timer {
     font-size: 30px;
+    margin-top: 30px;
 }
 
 #well-done {
